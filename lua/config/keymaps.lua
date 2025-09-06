@@ -1,17 +1,23 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 local map = vim.keymap.set
+local opts = { silent = true, noremap = true }
 
--- Normal mode
-map("n", "j", "h", { desc = "Move left" })
-map("n", "k", "j", { desc = "Move down" })
-map("n", "l", "k", { desc = "Move up" })
-map("n", "m", "l", { desc = "Move right" })
+-- Modes normal / visuel / operator-pending
+for _, m in ipairs({ "n", "x", "o" }) do
+  map(m, "j", "h", opts) -- gauche
+  map(m, "k", "j", opts) -- bas
+  map(m, "l", "k", opts) -- haut
+  map(m, "m", "l", opts) -- droite
+end
 
--- Visual mode
-map("v", "j", "h", { desc = "Move left" })
-map("v", "k", "j", { desc = "Move down" })
-map("v", "l", "k", { desc = "Move up" })
-map("v", "m", "l", { desc = "Move right" })
+-- remap ù → : en mode normal
+map("n", "ù", ":", { noremap = true })
+
+-- (optionnel) en mode visuel aussi
+map("v", "ù", ":", { noremap = true })
+
+-- ouvrir le dossier parent dans oil.nvim
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Ouvrir le parent directory avec Oil" })
 
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
