@@ -20,4 +20,4 @@ map("v", "ù", ":", { noremap = true })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Ouvrir le parent directory avec Oil" })
 
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Add any additional keymaps hereher tabs" })
