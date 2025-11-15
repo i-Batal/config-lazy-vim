@@ -15,3 +15,5 @@ require("lspconfig").lua_ls.setup({
     vim.diagnostic.disable(bufnr)
   end,
 })
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
