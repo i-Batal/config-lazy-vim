@@ -26,13 +26,15 @@ return {
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = {
-      preset = "default", -- tu peux mettre "default" | "super-tab" | "enter" | "none"
-      -- si tu mets "none", tu choisis tout à la main :
+      preset = "default",
       ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
-      ["<CR>"] = { "accept", "fallback" }, -- entrée valide la complétion
+      ["<CR>"] = { "accept", "fallback" },
       ["<Tab>"] = { "select_next", "fallback" },
       ["<S-Tab>"] = { "select_prev", "fallback" },
       ["<C-e>"] = { "cancel", "fallback" },
+      -- Navigation JKLM style (C-k = bas, C-l = haut)
+      ["<C-k>"] = { "select_next", "fallback" },
+      ["<C-l>"] = { "select_prev", "fallback" },
     },
 
     appearance = {
