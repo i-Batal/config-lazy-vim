@@ -60,6 +60,7 @@ local jklm_filetypes = {
   "neo-tree", -- neo-tree
   "NvimTree", -- nvim-tree
   "fugitive", -- vim-fugitive
+  "floggraph", -- vim-flog
   "git", -- git buffers
   "gitcommit", -- git commit
   "help", -- aide vim
