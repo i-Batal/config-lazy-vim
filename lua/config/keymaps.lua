@@ -31,6 +31,18 @@ map("n", "<C-m>", "<C-w>l", opts) -- fenêtre droite
 map("n", "ù", ":", { noremap = true })
 map("v", "ù", ":", { noremap = true })
 
+-- Copier tout le fichier avec Y
+map("n", "Y", "ggVGy", { noremap = true, silent = true, desc = "Copier tout le fichier" })
+
+-- Copier le chemin absolu avec yp
+map("n", "yp", function()
+  local path = vim.fn.expand("%:p")
+  if path ~= "" then
+    vim.fn.setreg("+", path)
+    vim.notify('Path copié: ' .. path, vim.log.levels.INFO)
+  end
+end, { noremap = true, silent = true, desc = "Copier chemin absolu" })
+
 -- ouvrir le dossier parent dans oil.nvim
 map("n", "-", "<CMD>Oil<CR>", { desc = "Ouvrir le parent directory avec Oil" })
 
