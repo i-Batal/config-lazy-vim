@@ -1,0 +1,134 @@
+gui:
+  theme:
+    selectedLineBgColor:
+      - reverse
+
+keybinding:
+  universal:
+    # Navigation verticale (l=haut, k=bas)
+    prevItem: "l"
+    nextItem: "k"
+    prevItem-alt: "<up>"
+    nextItem-alt: "<down>"
+
+    # Navigation entre panels (j=gauche, m=droite)
+    prevBlock: "j"
+    nextBlock: "m"
+    prevBlock-alt: "<left>"
+    nextBlock-alt: "<right>"
+
+    # Scroll dans le panel principal
+    scrollUpMain: "L"
+    scrollDownMain: "K"
+    scrollUpMain-alt1: "<c-l>"
+    scrollDownMain-alt1: "<c-k>"
+
+    # Scroll horizontal
+    scrollLeft: "J"
+    scrollRight: "M"
+
+    # Pages
+    prevPage: "<c-u>"
+    nextPage: "<c-d>"
+
+    # Autres
+    quit: "q"
+    return: "<esc>"
+    executeCustomCommand: ":"
+    createRebaseOptionsMenu: "R"
+    undo: "u"
+    redo: "<c-r>"
+    filteringMenu: "<c-f>"
+    diffingMenu: "W"
+    copyToClipboard: "<c-o>"
+    submitEditorText: "<enter>"
+    appendNewline: "<a-enter>"
+    extrasMenu: "@"
+    togglePanel: "<tab>"
+    toggleWhitespaceInDiffView: "<c-w>"
+    new: "n"
+    edit: "e"
+    openFile: "o"
+    scrollDownMain-alt2: "<c-j>"
+    scrollUpMain-alt2: "<c-l>"
+    gotoTop: "<"
+    gotoBottom: ">"
+    toggleRangeSelect: "v"
+    rangeSelectUp: "L"
+    rangeSelectDown: "K"
+
+  status:
+    checkForUpdate: "U"
+    recentRepos: "<enter>"
+
+  files:
+    commitChanges: "c"
+    commitChangesWithoutHook: "w"
+    amendLastCommit: "A"
+    commitChangesWithEditor: "C"
+    ignoreFile: "i"
+    refreshFiles: "r"
+    stashAllChanges: "s"
+    viewStashOptions: "S"
+    toggleStagedAll: "a"
+    viewResetOptions: "D"
+    fetch: "f"
+    toggleTreeView: "`"
+    openMergeTool: "M"
+    openStatusFilter: "<c-b>"
+
+  branches:
+    createPullRequest: "o"
+    viewPullRequestOptions: "O"
+    checkoutBranchByName: "c"
+    forceCheckoutBranch: "F"
+    rebaseBranch: "r"
+    renameBranch: "R"
+    mergeIntoCurrentBranch: "M"
+    viewGitFlowOptions: "i"
+    fastForward: "f"
+    createTag: "T"
+    pushTag: "P"
+    setUpstream: "u"
+    fetchRemote: "f"
+
+  commits:
+    squashDown: "s"
+    renameCommit: "r"
+    renameCommitWithEditor: "R"
+    viewResetOptions: "g"
+    markCommitAsFixup: "f"
+    createFixupCommit: "F"
+    squashAboveCommits: "S"
+    moveDownCommit: "<c-k>"
+    moveUpCommit: "<c-l>"
+    amendToCommit: "A"
+    pickCommit: "p"
+    revertCommit: "t"
+    cherryPickCopy: "c"
+    cherryPickCopyRange: "C"
+    pasteCommits: "V"
+    tagCommit: "T"
+    checkoutCommit: "<space>"
+    resetCherryPick: "<c-R>"
+    copyCommitMessageToClipboard: "<c-y>"
+    openLogMenu: "<c-s>"
+    viewBisectOptions: "b"
+
+  stash:
+    popStash: "g"
+    renameStash: "r"
+
+  commitFiles:
+    checkoutCommitFile: "c"
+
+  main:
+    toggleDragSelect: "v"
+    toggleDragSelect-alt: "V"
+    toggleSelectHunk: "a"
+    pickBothHunks: "b"
+
+  submodules:
+    init: "i"
+    update: "u"
+    bulkMenu: "b"
