@@ -34,6 +34,10 @@ map("v", "ù", ":", { noremap = true })
 -- Copier tout le fichier avec Y
 map("n", "Y", "ggVGy", { noremap = true, silent = true, desc = "Copier tout le fichier" })
 
+-- Coller en mode ligne: p dessous, P dessus
+map("n", "p", "<cmd>put<cr>", { noremap = true, silent = true, desc = "Coller la ligne en dessous" })
+map("n", "P", "<cmd>put!<cr>", { noremap = true, silent = true, desc = "Coller la ligne au-dessus" })
+
 -- Copier le chemin absolu avec yp
 map("n", "yp", function()
   local path = vim.fn.expand("%:p")
