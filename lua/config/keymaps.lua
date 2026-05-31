@@ -19,6 +19,10 @@ for _, m in ipairs({ "n", "x", "o" }) do
   map(m, "M", "$", opts) -- fin de ligne
   map(m, "K", "5j", opts) -- 5 lignes bas
   map(m, "L", "5k", opts) -- 5 lignes haut
+
+  -- Navigation entre paragraphes / lignes vides
+  map(m, "(", "{", opts) -- ligne vide précédente
+  map(m, ")", "}", opts) -- ligne vide suivante
 end
 
 -- Navigation fenêtres avec Ctrl+jklm

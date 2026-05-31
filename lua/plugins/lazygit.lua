@@ -1,23 +1,37 @@
+-- LazyGit via Snacks: ouvrir nvim dans le terminal LazyGit
 return {
-  "kdheepak/lazygit.nvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
+  {
+    "kdheepak/lazygit.nvim",
+    enabled = false,
   },
-  cmd = {
-    "LazyGit",
-    "LazyGitConfig",
-    "LazyGitCurrentFile",
-    "LazyGitFilter",
-    "LazyGitFilterCurrentFile",
+  {
+    "folke/snacks.nvim",
+    opts = {
+      lazygit = {
+        configure = true,
+        config = {
+          os = {
+            editPreset = "nvim",
+            editInTerminal = true,
+          },
+        },
+      },
+    },
+    keys = {
+      {
+        "<leader>gg",
+        function()
+          Snacks.lazygit({ cwd = LazyVim.root.git() })
+        end,
+        desc = "LazyGit (root)",
+      },
+      {
+        "<leader>gG",
+        function()
+          Snacks.lazygit()
+        end,
+        desc = "LazyGit (cwd)",
+      },
+    },
   },
-  keys = {
-    { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-  },
-  config = function()
-    vim.g.lazygit_floating_window_scaling_factor = 0.9
-    -- Ouvre les fichiers LazyGit dans l'instance Neovim courante (via nvr)
-    if vim.fn.executable("nvr") == 1 then
-      vim.g.lazygit_use_neovim_remote = 1
-    end
-  end,
 }
